@@ -37,6 +37,7 @@ server.post("/products", async (req, res) => {
             (stat) => `${stat.stat.name}, ${stat.base_stat}`
           ),
           type: res.data.types.map((type) => type.type.name),
+          price: Math.floor(Math.random() * 10000) + 5000,
         });
       });
     });
